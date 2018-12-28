@@ -1,3 +1,7 @@
 <template>
-    
+    <div class="hex-grid">
+        <template class="hex" for:each={hexes} for:item="hex">
+            <c-starship-hex hex-id={hex} key={hex}></c-starship-hex>
+        </template>
+    </div>
 </template>
