@@ -1,21 +1,33 @@
-#hex-grid {
+
+.hex-grid {
     display: flex;
     flex-wrap: wrap;
-    width: 90%;
-    margin: 0 auto;
     overflow: hidden;
-    font-family: 'Raleway', sans-serif;
-    font-size: 15px;
-    list-style-type: none;
-  }
-  
-  .hex {
+}
+
+.hexagon {
     position: relative;
-    visibility:hidden;
-    outline:1px solid transparent; /* fix for jagged edges in FF on hover transition */
-  }
-  .hex::after{
-    content:'';
-    display:block;
-    padding-bottom: 86.602%;  /* =  100 / tan(60) * 1.5 */
-  }
+    width: 300px; 
+    height: 173.21px;
+    background-color: #FFFFFF;
+    margin: 86.60px 0;
+}
+
+.hexagon:before, .hexagon:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+}
+
+.hexagon:before {
+    bottom: 100%;
+    border-bottom: 86.60px solid #FFFFFF;
+}
+
+.hexagon:after {
+    top: 100%;
+    width: 0;
+    border-top: 86.60px solid #FFFFFF;
+}
