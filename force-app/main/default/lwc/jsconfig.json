@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "baseUrl": ".",
+        "paths": {
+            "c/hello-world": [
+                "helloWorld/helloWorld.js"
+            ],
+            "c/starship-grid": [
+                "starshipGrid/starshipGrid.js"
+            ],
+            "c/starship-hex": [
+                "starshipHex/starshipHex.js"
+            ]
+        }
+    },
+    "include": [
+        "**/*",
+        "../../../../.sfdx/typings/lwc/**/*.d.ts"
+    ]
+}
